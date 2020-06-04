@@ -1,4 +1,11 @@
-const resUrl = "http://127.0.0.1:8081";
+const env = require("./env");
+
+let resUrl;
+if (env === "dev") {
+  resUrl = "http://127.0.0.1:8081";
+} else if (env === "prod") {
+  resUrl = "http://47.115.46.38";
+}
 
 const category = [
   "Biomedicine",
